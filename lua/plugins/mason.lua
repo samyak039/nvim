@@ -10,6 +10,10 @@ return {
       "prettierd",
       "tailwindcss-language-server",
 
+      -- json
+      "json-lsp",
+      "jsonlint",
+
       -- lua
       "lua-language-server",
       "stylua",

@@ -10,14 +10,19 @@ return {
       -- lua
       "lua",
       "luadoc",
-      "lua patterns",
 
       -- python
-      -- "htmldjango",
+      "htmldjango",
       "ninja",
       "python",
       "rst",
       "toml",
+
+      -- misc
+      "bash",
+      "markdown",
+      "markdown_inline",
+      "regex",
     },
   },
 }
