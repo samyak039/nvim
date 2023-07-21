@@ -19,5 +19,13 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
---
 map("n", "<leader>bX", "<cmd>BufferLineCloseOthers<cr>", { desc = "Delete other buffers" })
+
+-- Move to window using the <ctrl> hjkl keys [vim-tmux-navigator]
+-- stylua: ignore
+map({ "n", "o", "v" }, "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { desc = "Go to left window/pane", remap = true })
+map({ "n", "o", "v" }, "<C-j>", "<cmd>TmuxNavigateDown<cr>", { desc = "Go to lower window/pane", remap = true })
+map({ "n", "o", "v" }, "<C-k>", "<cmd>TmuxNavigateUp<cr>", { desc = "Go to upper window/pane", remap = true })
+map({ "n", "o", "v" }, "<C-l>", "<cmd>TmuxNavigateRight<cr>", { desc = "Go to right window/pane", remap = true })
+map({ "n", "o", "v" }, "<C-Bslash>", "<cmd>TmuxNavigatePrevious<cr>",
+  { desc = "Go to previous window/pane", remap = true })
