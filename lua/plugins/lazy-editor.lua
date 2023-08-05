@@ -1,6 +1,6 @@
 return {
-  -- Find, Filter, Preview, Pick. All lua, all the time.
   {
+    -- Find, Filter, Preview, Pick. All lua, all the time.
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",
@@ -16,6 +16,15 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+      },
+    },
+  },
+  {
+    -- Navigate and manipulate file system. Part of 'mini.nvim' library.
+    "echasnovski/mini.files",
+    opts = {
+      windows = {
+        width_preview = 60,
       },
     },
   },

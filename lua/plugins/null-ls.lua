@@ -9,16 +9,40 @@ return {
       local null_ls = require("null-ls")
       return {
         sources = {
-          -- json
+          --======--
+          -- dart --
+          --======--
+          null_ls.builtins.formatting.dart_format,
+
+          --======--
+          -- json --
+          --======--
           null_ls.builtins.diagnostics.jsonlint,
 
-          -- python
+          --==========--
+          -- prettier --
+          --==========--
+          null_ls.builtins.formatting.prettierd,
+
+          --========--
+          -- python --
+          --========--
           null_ls.builtins.formatting.black,
-          null_ls.builtins.diagnostics.djlint,
-          -- null_ls.builtins.formatting.blackd, FIXME:
-          null_ls.builtins.diagnostics.djlint,
-          null_ls.builtins.diagnostics.mypy,
+          -- null_ls.builtins.formatting.blackd,
+          -- null_ls.builtins.formatting.isort,
+          null_ls.builtins.formatting.ruff,
+          -- null_ls.builtins.formatting.usort,
+          -- null_ls.builtins.diagnostics.djlint,
+          null_ls.builtins.diagnostics.mypy.with({ extra_args = { "--ignore-missing-imports" } }),
           null_ls.builtins.diagnostics.ruff,
+
+          --=================--
+          -- text / markdown --
+          --=================--
+          -- null_ls.builtins.code_actions.proselint,
+          -- null_ls.builtins.diagnostics.proselint,
+          -- null_ls.builtins.diagnostics.vale,
+          -- null_ls.builtins.formatting.remark,
         },
       }
     end,

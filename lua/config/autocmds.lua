@@ -2,17 +2,35 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
-vim.api.nvim_create_autocmd("VimEnter", {
-  desc = "Auto select virtualenv on Nvim open",
-  pattern = "*",
-  callback = function()
-    local venv = vim.fn.findfile("Pipfile", vim.fn.getcwd() .. ";")
+-- FileType specific WhichKey
+-- https://github.com/folke/which-key.nvim/issues/71#issuecomment-841656048
 
-    require("notify")("VirtualEnv: " .. venv)
+vim.cmd(([[
+autocmd FileType dart lua whichkeyDart()
+autocmd FileType python lua whichkeyPython()
+]]))
 
-    if venv ~= "" then
-      require("venv-selector").retrieve_from_cache()
-    end
-  end,
-  once = true,
-})
+_G.whichkeyPython = function()
+  local wk = require("which-key")
+  local venv = require("venv-selector")
+  wk.register({
+    ["<leader>m"] = {
+      name = "+local",
+      ["v"] = { function() venv.retrieve_from_cache() end, "Python Last VirtualEnv" },
+      ["V"] = { "<cmd>VenvSelect<cr>", "Python Select VirtualEnv" },
+    },
+  })
+end
+
+_G.whichkeyDart = function()
+  local wk = require("which-key")
+  local t = require("telescope")
+  wk.register({
+    ["<leader>m"] = {
+      name = "+local",
+      ["o"] = { "<cmd>FlutterOutlineToggle<cr>", "Flutter Outline" },
+      ["t"] = { function() t.extensions.flutter.commands() end, "Flutter Tools" },
+      ["v"] = { function() t.extensions.flutter.fvm() end, "Flutter Version" },
+    }
+  })
+end

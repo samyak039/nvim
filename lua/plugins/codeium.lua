@@ -1,5 +1,6 @@
 return {
   {
+    -- A native neovim extension for Codeium
     "jcdickinson/codeium.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -13,7 +14,17 @@ return {
   --   "Exafunction/codeium.vim",
   --   lazy = "VeryLazy",
   --   config = function()
+  --     vim.g.codeium_disable_bindings = 1
   --     require("codeium").setup()
   --   end,
+  --   -- keys = {
+  --   --   {
+  --   --     "<leader>sN",
+  --   --     function()
+  --   --       require("telescope").extensions.notify.notify()
+  --   --     end,
+  --   --     desc = "Notify History",
+  --   --   },
+  --   -- },
   -- },
 }

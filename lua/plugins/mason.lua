@@ -5,28 +5,52 @@ return {
   "williamboman/mason.nvim",
   opts = {
     ensure_installed = {
-      -- html/css
+      --======--
+      -- dart --
+      --======--
+      "dart-debug-adapter",
+
+      --==========--
+      -- html/css --
+      --==========--
       "prettier",
       "prettierd",
       "tailwindcss-language-server",
 
-      -- json
+      --======--
+      -- json --
+      --======--
       "json-lsp",
       "jsonlint",
 
-      -- lua
+      --=====--
+      -- lua --
+      --=====--
       "lua-language-server",
       "stylua",
 
-      -- python
+      --========--
+      -- python --
+      --========--
       "black",
-      -- "blackd-client", FIXME:
+      -- "blackd-client",
       "debugpy",
-      "djlint",
+      -- "djlint",
       "mypy",
       "pyright",
       "ruff",
       "ruff-lsp",
+      -- "usort",
+
+      --=================--
+      -- text / markdown --
+      --=================--
+      -- "ltex-ls",
+      -- "proselint",
+      -- "remark-cli",
+      -- -- "remark-language-server",
+      -- "vale",
+      -- -- "vale-ls",
     },
   },
 }

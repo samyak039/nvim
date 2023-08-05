@@ -30,8 +30,7 @@ return {
   -- SURROUND --
   --------------
   {
-    -- Neovim Lua plugin with fast and feature-rich surround actions. Part of
-    -- 'mini.nvim' library.
+    -- Neovim Lua plugin with fast and feature-rich surround actions.
     "echasnovski/mini.surround",
     opts = {
       mappings = {

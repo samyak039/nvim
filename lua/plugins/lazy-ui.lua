@@ -19,4 +19,37 @@ return {
       top_down = true,
     },
   },
+  {
+    -- Indent guides for Neovim
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      -- char = "┃", -- thic
+      char = "│", -- thin
+      -- show_trailing_blankline_indent = true,
+      -- show_current_context = true,
+    }
+  },
+  {
+    -- Neovim Lua plugin to visualize and operate on indent scope.
+    "echasnovski/mini.indentscope",
+    opts = {
+      -- symbol = "┃", -- thic
+      symbol = "│", -- thin
+      draw = {
+        animation = require('mini.indentscope').gen_animation.none(),
+        -- priority = 2,
+      },
+    }
+  },
+
+  --=======--
+  -- EXTRA --
+  --=======--
+  {
+    -- Easily create and manage predefined window layouts, bringing a new edge to your workflow
+    "folke/edgy.nvim",
+    opts = {
+      animate = { enabled = false }
+    }
+  }
 }
