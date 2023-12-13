@@ -16,10 +16,8 @@ return {
       italic = {
         comments = false,
       },
-      overrides = {
-        -- SignColumn = { bg = "#ff9900" }
-      },
-      --
+      -- transparent_mode = true,
+      --=========--
       -- default --
       --=========--
       -- undercurl = true,
@@ -56,7 +54,13 @@ return {
     "folke/tokyonight.nvim",
     priority = 1000,
     lazy = false,
-    opts = { style = "moon" },
+    opts = {
+      style = "moon",
+      styles = {
+        comments = { italic = false },
+        keywords = { italic = false },
+      },
+    },
   },
 
   -- Configure LazyVim to load colorscheme

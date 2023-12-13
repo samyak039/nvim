@@ -13,8 +13,8 @@ return {
       --==========--
       -- html/css --
       --==========--
-      "prettier",
-      "prettierd",
+      -- "prettier",
+      -- "prettierd",
       "tailwindcss-language-server",
 
       --======--

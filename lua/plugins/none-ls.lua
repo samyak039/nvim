@@ -1,0 +1,53 @@
+-- local nls = require("null-ls")
+
+return {
+  -- -- null-ls.nvim reloaded
+  -- -- Use Neovim as a language server to inject LSP diagnostics, code actions,
+  -- -- and more via Lua.
+  -- "nvimtools/none-ls.nvim",
+  -- -- ft = { "html", "jinja", "python" },
+  -- ft = { "html", "htmldjango ", "python" },
+  -- opts = {
+  --   sources = {
+  --     --======--
+  --     -- dart --
+  --     --======--
+  --     nls.builtins.formatting.dart_format,
+  --
+  --     --======--
+  --     -- json --
+  --     --======--
+  --     nls.builtins.diagnostics.jsonlint,
+  --
+  --     -- --==========--
+  --     -- -- prettier --
+  --     -- --==========--
+  --     nls.builtins.formatting.prettierd,
+  --     -- .with({
+  --     --   extra_filetypes = { "django", "jinja" },
+  --     -- }),
+  --
+  --     --========--
+  --     -- python --
+  --     --========--
+  --     nls.builtins.formatting.black,
+  --     -- null_ls.builtins.formatting.blackd,
+  --     -- null_ls.builtins.formatting.isort,
+  --     nls.builtins.formatting.ruff,
+  --     -- null_ls.builtins.formatting.usort,
+  --     -- null_ls.builtins.diagnostics.djlint,
+  --     nls.builtins.diagnostics.mypy.with({
+  --       extra_args = { "--ignore-missing-imports" },
+  --     }),
+  --     nls.builtins.diagnostics.ruff,
+  --
+  --     --=================--
+  --     -- text / markdown --
+  --     --=================--
+  --     -- null_ls.builtins.code_actions.proselint,
+  --     -- null_ls.builtins.diagnostics.proselint,
+  --     -- null_ls.builtins.diagnostics.vale,
+  --     -- null_ls.builtins.formatting.remark,
+  --   },
+  -- },
+}

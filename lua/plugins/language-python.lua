@@ -3,9 +3,16 @@ return {
     -- Allows selection of python virtual environment from within neovim
     "linux-cultist/venv-selector.nvim",
     cmd = "VenvSelect",
+    ft = "python",
     keys = {
-      { "<leader>cv", function() venv.retrieve_from_cache() end, desc = "Python last VirtualEnv" },
-      { "<leader>cV", "<cmd>:VenvSelect<cr>",                    desc = "Python Select VirtualEnv" },
+      -- { "<localleader>pv", function() venv.retrieve_from_cache() end, desc = "Python last VirtualEnv" },
+      { "<localleader>pv", "<cmd>VenvSelectCached<cr>", desc = "Python last VirtualEnv" },
+      { "<localleader>pV", "<cmd>VenvSelect<cr>",       desc = "Python Select VirtualEnv" },
     },
-  }
+  },
+  -- {
+  --   -- Fold your Python docstrings
+  --   "yhat/vim-docstring",
+  --   event = "VeryLazy",
+  -- }
 }

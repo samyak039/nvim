@@ -3,7 +3,11 @@ return {
   "folke/which-key.nvim",
   opts = {
     defaults = {
-      ["<leader>m"] = { name = "+local" },
+      ["<leader>h"] = { name = "+harpoon" },
+      ["<localLeader>c"] = { name = "+leetcode" },
+      ["<localLeader>d"] = { name = "+dart" },
+      ["<localLeader>l"] = { name = "+vimtex" },
+      ["<localLeader>p"] = { name = "+python" },
     },
   },
 }

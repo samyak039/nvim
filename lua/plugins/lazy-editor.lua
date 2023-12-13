@@ -20,6 +20,13 @@ return {
     },
   },
   {
+    -- Navigate your code with search labels, enhanced character motions and Treesitter integration
+    "folke/flash.nvim",
+    opts = {
+      labels = "0123456789",
+    }
+  },
+  {
     -- Navigate and manipulate file system. Part of 'mini.nvim' library.
     "echasnovski/mini.files",
     opts = {
